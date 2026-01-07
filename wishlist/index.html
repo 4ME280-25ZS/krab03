@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wishlist - Rezervace dárků</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Seznam očekávaných darů</h1>
+    <p class="hint">Klikněte na "Rezervovat" a napište své jméno — nikde není potřeba se přihlašovat.</p>
+
+    <div id="gifts" class="gifts"></div>
+
+    <div class="note">Stránka používá Supabase jako databázi. Nezapomeňte vložit `SUPABASE_URL` a `SUPABASE_ANON_KEY` do <code>script.js</code>.</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

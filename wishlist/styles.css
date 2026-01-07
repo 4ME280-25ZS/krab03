@@ -1,0 +1,21 @@
+:root{--bg:#f6f9fb;--card:#fff;--accent:#0066cc;--muted:#6b7280}
+*{box-sizing:border-box}body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);margin:0;padding:24px;color:#111}
+.wrap{max-width:800px;margin:0 auto}
+h1{color:var(--accent);margin:0 0 6px}
+.hint{color:var(--muted);margin:0 0 18px}
+.gifts{display:grid;gap:12px}
+.gift{background:var(--card);padding:14px;border-radius:10px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.title{font-weight:600}
+.meta{color:var(--muted);font-size:0.95rem}
+.btn{margin-left:auto;background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn[disabled]{opacity:.5;cursor:default}
+.note{margin-top:18px;color:var(--muted);font-size:0.9rem}
+
+/* input modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35)}
+.dialog{background:white;padding:18px;border-radius:10px;min-width:300px}
+.dialog input{width:100%;padding:8px;margin-top:8px;border:1px solid #ddd;border-radius:6px}
+.dialog .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.dialog .actions button{padding:8px 10px;border-radius:6px;border:0;cursor:pointer}
+.cancel{background:#eee}
+.confirm{background:var(--accent);color:#fff}
