@@ -59,15 +59,28 @@
             <!-- Contact Section -->
             <div class="contact">
                 <h2>Kontakt</h2>
-                <div class="contact-links">
-                    <a href="mailto:jan.dvorak@example.com" class="contact-link">
+
+                <div class="contact-info">
+                    <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                    <a href="tel:+420777123456" class="contact-link">
+                        <div class="contact-text">
+                            <div class="label">Email</div>
+                            <div class="value" id="email-value">jan.dvorak@example.com</div>
+                        </div>
+                        <button class="copy-btn" data-copy="jan.dvorak@example.com" title="Kopírovat email">Kopírovat</button>
+                    </div>
+
+                    <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>Telefon</span>
-                    </a>
+                        <div class="contact-text">
+                            <div class="label">Telefon</div>
+                            <div class="value" id="phone-value">+420 777 123 456</div>
+                        </div>
+                        <button class="copy-btn" data-copy="+420777123456" title="Kopírovat telefon">Kopírovat</button>
+                    </div>
+                </div>
+
+                <div class="contact-links">
                     <a href="https://github.com" target="_blank" class="contact-link">
                         <i class="fab fa-github"></i>
                         <span>GitHub</span>

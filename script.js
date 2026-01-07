@@ -43,17 +43,37 @@ window.addEventListener('scroll', () => {
 });
 
 // Add ripple effect on button clicks
-document.querySelectorAll('.contact-link, .tag, .skill-item').forEach(element => {
-    element.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
+// Copy to clipboard for contact info
+document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        const text = this.dataset.copy;
+        if (!text) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                const original = this.textContent;
+                this.textContent = 'Zkopírováno!';
+                setTimeout(() => this.textContent = original, 1400);
+            }).catch(() => {
+                // fallback
+                const el = document.createElement('textarea');
+                el.value = text;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                el.remove();
+            });
+        } else {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            el.remove();
+            const original = this.textContent;
+            this.textContent = 'Zkopírováno!';
+            setTimeout(() => this.textContent = original, 1400);
+        }
     });
 });
 

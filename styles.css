@@ -222,6 +222,59 @@ body {
     font-weight: 600;
 }
 
+/* Visible contact info and copy button */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-item i {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    min-width: 34px;
+}
+
+.contact-text .label {
+    font-size: 0.85em;
+    color: var(--text-light);
+}
+
+.contact-text .value {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.copy-btn {
+    margin-left: auto;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.12s ease;
+}
+
+.copy-btn:hover { background: #005bb5; transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+    .contact-info { gap: 10px; }
+    .copy-btn { padding: 6px 10px; }
+}
+
 /* Projects Section */
 .projects {
     padding: 40px 30px;
