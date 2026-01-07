@@ -1,7 +1,7 @@
-// --- CONFIG: Replace these with your Supabase values ---
-const SUPABASE_URL = 'REPLACE_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'REPLACE_SUPABASE_ANON_KEY';
-// ------------------------------------------------------
+// --- CONFIG: Supabase values provided by user ---
+const SUPABASE_URL = 'https://sodabavbyeindevkzxir.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_qmPKdTaL8SJOGhP4vW4wcQ_P_9k4Ujd';
+// -------------------------------------------------
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
